@@ -1,0 +1,31 @@
+1. What was wrong with the calculateSum method?
+
+The loop started at index 1 instead of 0, so it skipped the first number.
+
+The condition i <= nums.length caused the loop to go out of bounds when i == nums.length.
+
+The statement sum += nums[i]; accessed an invalid index at the end, leading to an ArrayIndexOutOfBoundsException.
+//////
+
+2. How did using Step Into help you find the recursion in factorial?
+
+Step Into (F7) allowed me to go inside each recursive call of factorial, showing how the method kept calling itself with decreasing values until it reached the base case (num == 0).
+
+I could watch how the stack built up and how each level of the call returned and multiplied the results.
+/////
+
+3. What happens if you Step Over vs Step Into when calling a method?
+
+Step Over (F8) skips over the method call and runs it all at once, without showing the inside.
+
+Step Into (F7) enters the method so you can see each line of code being executed inside it.
+
+////////
+
+4. Why is it useful to inspect memory state in debugging?
+
+It shows the current values of variables, arrays, and objects during execution.
+
+This helps identify logic errors, incorrect calculations, or unexpected values.
+
+You can verify assumptions and catch bugs without relying only on print statements.
